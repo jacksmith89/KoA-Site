@@ -1,147 +1,302 @@
----
-// Utils
-import { Icon } from 'astro-icon/components';
----
-
-<section id="services" class="services">
-  <div class="card">
-    <picture>
-      <Icon name="service1" width="48" height="48" aria-hidden="true" />
-    </picture>
-    <h2>Service 1</h2>
-    <p>
-      Talk about the service with keywords people will be searching for it by.
-      Keep it 1-2 sentences.
-    </p>
-  </div>
-  <div class="card">
-    <picture>
-      <Icon name="service2" width="48" height="48" aria-hidden="true" />
-    </picture>
-    <h2>Service 2</h2>
-    <p>
-      Talk about the service with keywords people will be searching for it by.
-      Keep it 1-2 sentences.
-    </p>
-  </div>
-  <div class="card">
-    <picture>
-      <Icon name="service3" width="48" height="48" aria-hidden="true" />
-    </picture>
-    <h2>Service 3</h2>
-    <p>
-      Talk about the service with keywords people will be searching for it by.
-      Keep it 1-2 sentences.
-    </p>
-  </div>
+<!-- ============================================ --><!--                   Steps                      --><!-- ============================================ -->
+<section id="steps-1173">
+    <div class="cs-container">
+        <div class="cs-content">
+            <!-- <span class="cs-topper">Our Work Process</span> -->
+            <h2 class="cs-title">How To Get Started</h2>
+            <!-- <p class="cs-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa libero sint hic accusantium exercitationem, voluptatem officia quaerat velit quis ullam?
+            </p> -->
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img
+                        class="cs-icon"
+                        src="src/icons/single-note.svg"
+                        alt="icon"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                        aria-hidden="true"
+                    />
+                </picture>
+                <h3 class="cs-h3">Get To Know Us</h3>
+                <p class="cs-item-text">
+                    Learn more about our story, our philosophy, and our approach
+                    to teaching to find out if Keys on Avalon is the right fit
+                    for you or your student.
+                </p>
+                <br />
+                <a href="/about/" class="cs-button-solid">About Us</a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img
+                        class="cs-icon"
+                        src="src/icons/double-note.svg"
+                        alt="icon"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                        aria-hidden="true"
+                    />
+                </picture>
+                <h3 class="cs-h3">See What We Have To Offer</h3>
+                <p class="cs-item-text">
+                    Explore our tuition options and find the right fit for your
+                    goals and budget, as well equipment rentals and other
+                    frequently asked questions.
+                </p>
+                <br />
+                <a href="/about/" class="cs-button-solid">Lessons & Pricing</a>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img
+                        class="cs-icon"
+                        src="src/icons/triple-note.svg"
+                        alt="icon"
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                        aria-hidden="true"
+                    />
+                </picture>
+                <h3 class="cs-h3">Reach Out</h3>
+                <p class="cs-item-text">
+                    Have additional questions not covered here? Feel ready to
+                    book your free assessment and trial lesson? We'd love to
+                    hear from you!
+                </p>
+                <br />
+                <a href="/about/" class="cs-button-solid">Contact Us</a>
+            </li>
+        </ul>
+        <!-- <a href="/about/" class="cs-button-solid"
+            >Schedule Your Free Trial Lesson</a
+        > -->
+    </div>
+    <!--Tire Screech-->
+    <img
+        class="cs-graphic"
+        src="/src/icons/music-staff.svg"
+        alt="icon"
+        width="840"
+        height="357"
+        loading="lazy"
+        decoding="async"
+        aria-hidden="true"
+    />
 </section>
 
 <style lang="less">
-  /*-- -------------------------- -->
-<---          Services          -->
+    /*-- -------------------------- -->
+<---           Steps            -->
 <--- -------------------------- -*/
 
-  /* Mobile */
-  @media only screen and (min-width: 0em) {
-    .services {
-      width: 90%;
-      max-width: (1320/16em);
-      margin: auto;
-      margin-top: (-167/16em);
-      margin-bottom: (50/16em);
-      padding: (50/16em) (20/16em);
-      background: #fff;
-      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-      border-top: (6/16em) solid var(--primary);
-      border-radius: (5/16em);
-      position: relative;
-      z-index: 100;
-      .card {
-        width: 100%;
-        max-width: (357/16em);
-        margin: auto;
-        margin-bottom: (50/16em);
-        display: block;
-        &:last-of-type {
-          margin-bottom: 0;
-        }
+    /* Mobile - 360px */
+    @media only screen and (min-width: 0rem) {
+        #steps-1173 {
+            padding: var(--sectionPadding);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
 
-        picture {
-          width: (88/16em);
-          height: (88/16em);
-          margin: auto;
-          margin-bottom: (23/16em);
-          background: var(--primary);
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+            .cs-container {
+                width: 100%;
+                /* changes to 1280px at tablet */
+                max-width: (704/16rem);
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* 48px - 64px */
+                gap: clamp(3rem, 6vw, 4rem);
+            }
 
-          img {
-            width: (48/16em);
-            height: (48/16em);
-          }
+            .cs-content {
+                /* set text align to left if content needs to be left aligned */
+                text-align: center;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                /* centers content horizontally, set to flex-start to left align */
+                align-items: center;
+            }
+
+            .cs-text {
+                font-size: var(--bodyFontSize);
+                line-height: 1.5em;
+                text-align: inherit;
+                width: 100%;
+                max-width: (650/16rem);
+                margin: 0;
+                color: var(--bodyTextColor);
+            }
+
+            .cs-card-group {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                gap: (20/16rem);
+            }
+
+            .cs-item {
+                text-align: center;
+                list-style: none;
+                display: flex;
+                grid-column: span 12;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                transition:
+                    transform 0.3s,
+                    border-color 0.3s;
+
+                &:hover {
+                    transform: scale(1.1);
+                    border-color: var(--primary);
+                }
+
+                &:last-of-type {
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &:nth-of-type(even) {
+                    &:after {
+                        /* scaleX -1 flips it horizontally */
+                        transform: rotate(-135deg) scaleX(-1);
+                    }
+                }
+
+                // &:after {
+                //     content: "";
+                //     position: relative;
+                //     display: block;
+                //     /* 54px - 84px */
+                //     width: clamp(3.375rem, 6vw, 5.25rem);
+                //     height: clamp(3.375rem, 6vw, 5.25rem);
+                //     margin-top: (20/16rem);
+                //     background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/curved-arrow-light.svg");
+                //     background-size: contain;
+                //     background-position: center;
+                //     background-repeat: no-repeat;
+                //     opacity: 1;
+                //     transform: rotate(135deg);
+                // }
+            }
+
+            .cs-picture {
+                margin-bottom: (24/16rem);
+                width: (88/16rem);
+                height: (88/16rem);
+                border: 1px solid #858585;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition:
+                    transform 0.3s,
+                    border-color 0.3s;
+            }
+
+            .cs-icon {
+                width: (40/16rem);
+                height: auto;
+                display: block;
+            }
+
+            .cs-h3 {
+                font-size: (20/16rem);
+                line-height: 1.2em;
+                text-align: inherit;
+                margin: 0 0 (12/16rem) 0;
+                color: var(--headerColor);
+            }
+
+            .cs-item-text {
+                font-size: (16/16rem);
+                line-height: 1.5em;
+                text-align: inherit;
+                max-width: (413/16rem);
+                margin: 0;
+                color: var(--bodyTextColor);
+            }
+
+            .cs-graphic {
+                width: (840/16rem);
+                height: auto;
+                opacity: 0.1;
+                position: absolute;
+                top: (-80/16rem);
+                left: (-80/16rem);
+                z-index: -1;
+                transform: rotate(-10deg);
+            }
         }
-        h2 {
-          font-size: (32/16em);
-          font-weight: 700;
-          line-height: 27/20em;
-          text-align: center;
-          margin-bottom: 13/20em;
-          color: #1a1a1a;
-        }
-        p {
-          line-height: 24/18em;
-          text-align: center;
-          width: 100%;
-          opacity: 0.7;
-        }
-      }
     }
-  }
 
-  /* Inbetween */
-  @media only screen and (min-width: 768px) {
-    .services {
-      font-size: ~"min(1.8vw, 1em)";
-      width: 98%;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+    /* Tablet - 768px */
+    @media only screen and (min-width: 48rem) {
+        #steps-1173 {
+            .cs-container {
+                max-width: (1280/16rem);
+            }
 
-      .card {
-        max-width: (325/16em);
-        margin: 0;
-      }
-    }
-  }
+            .cs-item {
+                grid-column: span 4;
 
-  /* Large Desktop */
-  @media only screen and (min-width: 1300px) {
-    .services {
-      padding: (50/16em) (80/16em);
+                &:nth-of-type(1) {
+                    &:after {
+                        transform: rotate(45deg);
+                    }
+                }
 
-      .card {
-        max-width: (357/16em);
-      }
-    }
-  }
+                &:nth-of-type(2) {
+                    &:after {
+                        transform: rotate(135deg) scaleX(-1);
+                    }
+                }
 
-  /* Dark mode */
-  @media only screen and (min-width: 0em) {
-    body.dark-mode {
-      #services {
-        background: var(--medium);
-
-        picture {
-          background: var(--primaryDark);
+                &:after {
+                    margin: 0;
+                    position: absolute;
+                    right: (-40/16rem);
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+            }
         }
-
-        h2 {
-          font-weight: bold;
-          color: #fff;
-        }
-      }
     }
-  }
+
+    /* Dark Mode */
+    @media only screen and (min-width: 0rem) {
+        body.dark-mode {
+            #steps-1173 {
+                .cs-title,
+                .cs-text,
+                .cs-item-text,
+                .cs-h3 {
+                    color: var(--bodyTextColorWhite);
+                }
+
+                .cs-text,
+                .cs-item-text {
+                    opacity: 0.8;
+                }
+
+                .cs-graphic {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
 </style>

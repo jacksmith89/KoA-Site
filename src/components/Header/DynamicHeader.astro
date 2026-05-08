@@ -106,7 +106,7 @@ import navData from "@data/navData.json";
 									</a>
 								)}
 
-								{entry.children?.length > 0 && (
+								{/* {entry.children?.length > 0 && (
 									// If entry has children in navData.json, create a drop down menu
 									<ul
 										class="cs-drop-ul"
@@ -129,10 +129,31 @@ import navData from "@data/navData.json";
 											</li>
 										))}
 									</ul>
-								)}
+								)} */}
 							</li>
 						))
 					}
+					<!-- Student Login Dropdown -->
+					<li class="cs-li cs-dropdown" transition:persist="duet-login">
+						<button
+							id="duet-login-dropdown"
+							aria-expanded="false"
+							aria-haspopup="menu"
+							class="cs-li-link cs-dropdown-toggle"
+						>
+							Student Login
+							<Icon name="mdi--caret" class="cs-drop-icon" />
+						</button>
+						<ul class="cs-drop-ul cs-duet-drop" aria-labelledby="duet-login-dropdown">
+							<li class="cs-drop-li">
+								<script type="text/javascript">
+									var mth_remotelogin_title = "Student/Parent Login";
+									var mth_remotelogin_return_url = "https://keysonavalon.com";
+								</script>
+								<script type="text/javascript" src="https://app.duetpartner.com/js/remotelogin.js"></script>
+							</li>
+						</ul>
+					</li>
 					<li class="cs-li cs-hide-on-desktop">
 						<a
 							href="/contact/"
@@ -877,3 +898,19 @@ import navData from "@data/navData.json";
 		}
 	}
 </style>
+<script>
+    function loadDuetWidget() {
+        const existing = document.getElementById('mth_remotelogin_div');
+        if (existing) existing.remove();
+
+        const target = document.querySelector('.cs-duet-drop .cs-drop-li');
+        if (!target) return;
+
+        const script = document.createElement('script');
+        script.src = 'https://app.duetpartner.com/js/remotelogin.js';
+        script.type = 'text/javascript';
+        target.appendChild(script);
+    }
+
+    document.addEventListener('astro:after-swap', loadDuetWidget);
+</script>

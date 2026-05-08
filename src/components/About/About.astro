@@ -6,40 +6,26 @@ import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
 
 // Images
-import fingers from "@assets/images/services/pianofingers.avif";
-import keyboard from "@assets/images/services/keyboardpic.avif";
+import cabinets2 from "@assets/images/services/cabinets2.jpg";
+import construction from "@assets/images/services/construction.jpg";
 ---
 
 <section id="sbs">
 	<div class="cs-container">
 		<!-- Left Image Section -->
 		<div class="cs-left">
-			<Picture src={fingers} alt="piano fingers" width={522} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} priority />
-			<Picture src={keyboard} alt="keyboard" width={390} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} priority />
+			<Picture src={cabinets2} alt="cabinets" width={522} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} priority />
+			<Picture src={construction} alt="house" width={390} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} priority />
 		</div>
 		<!-- Right Content Section-->
 		<div class="cs-right">
-			<span class="cs-topper">Why Choose</span>
-			<h2 class="cs-title">Keys on Avalon</h2>
-			<span class="cs-topper">All Ages and Levels Welcome</span>
-			<p class="cs-text">
-				From the five-year-old just finding the keys to the adult who always meant to learn, there's a place for everyone here.
-			</p>
-			<span class="cs-topper">All-Inclusive Pricing</span>
-			<p class="cs-text">
-				No surprise fees for books or materials. Tuition covers everything: a binder, printed music, and practice assignments are provided from day one.
-			</p>
-			<span class="cs-topper">More Than Just Technique</span>
-			<p class="cs-text">
-				Our teaching philosophy is built around how we know students learn -- through play, curiosity, and building a genuine love of music.
-			</p>
-			<div class="cs-flex-group">
-				<p class="cs-flex-p">The language of music is common to all generations and nations; it is understood by everybody, since it is understood with the heart. </p>
-				<span class="cs-name">Gioacchino Rossini</span>
-				<span class="cs-job">19th Century Italian Composer</span>
-				<Icon name="quote-white" class="cs-quote-icon" />
-			</div>
-			<a href="/about/" class="cs-button-solid">More About Us</a>
+			<span class="cs-topper">The Philosphy of</span>
+      <h2 class="cs-title">Keys on Avalon</h2>
+      <p>My core belief is that everyone benefits from having more music in their life. While I hope that students who come through my studio take what I have to teach about singing and playing the piano, my real goal is to help every student build a foundation and love of music that will travel with them wherever their journey leads, whether that's continuing lessons, picking up a different instrument, or simply being someone who understands and appreciates music deeply.
+      <br><br>
+      I want every student to be engaged and excited about the next step, and growing at the pace that's right for them. Students here will learn the language of music, to play, hear, understand, and feel it, so that their connection to music is deeper and stronger than when they first walked in the door.
+      <br><br>
+      That philosophy means that I want my lessons to be affordable and approachable, that I want to remove barriers to entry wherever I can, and to make learning music engaging and positive at every stage, so that everyone who wants more music in their life has the chance to find it.</p>
 		</div>
 	</div>
 </section>

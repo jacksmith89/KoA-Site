@@ -6,7 +6,7 @@ import { getImage } from "astro:assets";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Banner from "@components/Banner/Banner.astro";
 import FAQ from "@components/FAQ/FAQ.astro";
-import SideBySide from "@components/SideBySide/SideBySide.astro";
+import AboutSection from "@components/About/About.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
@@ -16,7 +16,7 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 
 <BaseLayout title="About" description="Meta description for the page" heroImage={optimizedImage}>
 	<Banner title="About Us" image={optimizedImage} />
-	<SideBySide />
+	<AboutSection />
 	<FAQ />
 	<CTA />
 </BaseLayout>

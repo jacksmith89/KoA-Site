@@ -10,18 +10,9 @@
     "children": []
   },
   {
-    "key": "Projects",
-    "url": "/projects/",
-    "children": [
-      {
-        "key": "Project 1",
-        "url": "/projects/project-1/"
-      },
-      {
-        "key": "Project 2",
-        "url": "/projects/project-2/"
-      }
-    ]
+    "key": "Lessons",
+    "url": "/lessons/",
+    "children": []
   },
   {
     "key": "Reviews",
@@ -29,8 +20,8 @@
     "children": []
   },
   {
-    "key": "Blog",
-    "url": "/blog/",
+    "key": "FAQ",
+    "url": "/faq/",
     "children": []     
   }
 ]

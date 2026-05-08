@@ -1,30 +1,30 @@
 // ===== SITE CONSTANTS =====
 export const SITE = {
-	title: "Code Stitch Web Designs",
-	tagline: "Professional Web Design Services",
-	description: "Code Stitch Web Designs offers top-tier web design and development services to meet all your project needs. Start exploring and contact our team for superior quality and reliability.",
-	url: "https://www.yourwebsite.com",
-	author: "Code Stitch Team",
+	title: "Keys on Avalon",
+	tagline: "Piano and Vocal Studio",
+	description: "Keys on Avalon offers affordable piano and vocal lessons in the Treasure Valley and beyond. Contact us to schedule a free assessment and trial lesson.",
+	url: "https://www.keysonavalon.com",
+	author: "Wesley Reid",
 	locale: "en",
 };
 
 // ===== BUSINESS INFO =====
 export const BUSINESS = {
 	name: SITE.title,
-	email: "help@codestitch.app",
-	phoneForTel: "555-779-4407",
-	phoneFormatted: "(555) 779-4407",
+	email: "keysonavalon@gmail.com",
+	phoneForTel: "801-332-9581",
+	phoneFormatted: "(801) 332-9581",
 	logo: "/assets/favicons/favicon.svg",
 	address: {
-		lineOne: "First Address Line",
-		lineTwo: "Second Address Line",
-		city: "Denver",
-		state: "CO",
-		zip: "80206",
-		mapLink: "https://goo.gl/maps/UAQn4vuGDiwv7DV39",
+		lineOne: "310 E. 2nd Street",
+		// lineTwo: "",
+		city: "Kuna",
+		state: "ID",
+		zip: "83634",
+		mapLink: "https://maps.app.goo.gl/rGNVmvktun6XkoqL6",
 	},
 	socials: {
-		facebook: "https://www.facebook.com/",
+		facebook: "https://www.facebook.com/profile.php?id=61560208978301",
 		instagram: "https://www.instagram.com/",
 	},
 };

@@ -8,8 +8,8 @@ import Hero from "@components/Hero/Hero.astro";
 import Services from "@components/Services/Services.astro";
 import SideBySide from "@components/SideBySide/SideBySide.astro";
 import SideBySideReverse from "@components/SideBySideReverse/SideBySideReverse.astro";
-import Gallery from "@components/Gallery/Gallery.astro";
-import Testimonials from "@components/Testimonials/Testimonials.astro";
+// import Gallery from "@components/Gallery/Gallery.astro";
+// import Testimonials from "@components/Testimonials/Testimonials.astro";
 import FAQ from "@components/FAQ/FAQ.astro";
 import CTASimple from "@components/CTA/CTASimple.astro";
 
@@ -18,13 +18,13 @@ import heroImage from "@assets/images/hero/hero.jpg";
 const optimizedHeroImage = await getImage({ src: heroImage, format: "webp" });
 ---
 
-<BaseLayout title="Pixel Perfect Websites" description="Meta description for the page" heroImage={optimizedHeroImage}>
+<BaseLayout title="Keys on Avalon" description="Meta description for the page" heroImage={optimizedHeroImage}>
 	<Hero image={optimizedHeroImage} />
 	<Services />
 	<SideBySide />
 	<SideBySideReverse />
-	<Gallery />
-	<Testimonials />
+	<!-- <Gallery /> -->
+	<!-- <Testimonials /> -->
 	<FAQ />
 	<CTASimple />
 </BaseLayout>

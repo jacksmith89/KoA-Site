@@ -5,8 +5,8 @@
 import { Picture } from "astro:assets";
 
 // Images
-import construction from "@assets/images/services/construction.jpg";
-import cabinets2 from "@assets/images/services/cabinets2.jpg";
+import keyboard from "@assets/images/services/keyboardpic.avif";
+import fingers from "@assets/images/services/pianofingers.avif";
 ---
 
 <section id="sbs-r">
@@ -14,41 +14,52 @@ import cabinets2 from "@assets/images/services/cabinets2.jpg";
     <!-- Left Image Section -->
     <div class="cs-left">
       <Picture
-        src={construction}
-        alt="house"
+        src={keyboard}
+        alt="keyboard"
         width={400}
         height={560}
-        formats={['avif', 'webp']}
+        formats={["avif", "webp"]}
         pictureAttributes={{ class: "cs-picture cs-picture1" }}
       />
       <Picture
-        src={cabinets2}
-        alt="cabinets"
+        src={fingers}
+        alt="piano fingers"
         width={400}
         height={560}
-        formats={['avif', 'webp']}
+        formats={["avif", "webp"]}
         pictureAttributes={{ class: "cs-picture cs-picture2" }}
       />
     </div>
     <!-- Right Content Section-->
     <div class="cs-right">
-      <span class="cs-topper">SEO Ranking</span>
-      <h2 class="cs-title">Talk about a main service keyword</h2>
-      <p class="cs-text">
-        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-        officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-        et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-        nonatourean olei aptent taciti sociosqu ad litora torquent per.
+      <span class="cs-topper">Lesson Options At</span>
+      <h2 class="cs-title">Keys on Avalon</h2>
+      <p>
+        Piano lessons for every age, every starting point, and every goal, from
+        a five-year-old's first time at the keys to an adult finally making good
+        on a lifelong intention.
       </p>
-      <p class="cs-text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur,
-        iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi
-        fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores
-        ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo
-        quia neque est quas, in placeat. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Doloribus modi laudantium voluptatibus
-        rem libero error minus quia eligendi sapiente eos.
+      <br />
+      <p>
+        Solo lessons run 30, 45, or 60 minutes depending on the student's goals.
+        Partner lessons let two students share a longer lesson at a lower
+        per-student cost. Whether students are siblings or friends, a partner
+        brings more interaction and more energy to every lesson.
       </p>
+      <br />
+      <p>
+        All lessons are month-to-month with no long-term commitment required,
+        and students who practice consistently are rewarded for it! Keys on
+        Avalon's "Practice Pays" program offers up to $15 off the following
+        month's tuition for students who make practice a habit (see FAQ for
+        details).
+      </p>
+      <br />
+      <p>Lessons start at $90 a month.</p>
+      <br />
+      <a href="/lessons/" class="cs-button-solid"
+        >See Full Pricing And Lesson Options</a
+      >
     </div>
   </div>
 </section>
