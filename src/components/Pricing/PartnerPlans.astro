@@ -11,7 +11,7 @@ import musicstaff from "src/icons/music-staff.svg";
             <span class="cs-topper">Pricing</span>
             <h2 class="cs-title">Partner Lesson Plans</h2>
             <p class="cs-text">
-                Experience the joy of making music together! Partner lessons pair two students, regardless of age and level, in a collaborative environment where they can learn from one another. This format builds rhythmic stability, ensemble skills, and confidence through shared performance, all while making the learning process social and engaging. <br />Listed pricing is per student.<br />
+                Experience the joy of making music together! Partner lessons pair two students, regardless of age and level, in a collaborative environment where they can learn from one another. This format builds rhythmic stability, ensemble skills, and confidence through shared performance, all while making the learning process social and engaging. <br /><b>Listed pricing is per student.</b><br />
             </p>
         </div>
         <ul class="cs-card-group">
@@ -52,7 +52,7 @@ import musicstaff from "src/icons/music-staff.svg";
                 </ul>
             </li>
         </ul>
-        <a href="" class="cs-button-solid">Book Your Free Assessment and Trial Lesson</a>
+        <a href="" class="cs-button-solid">Book Your Free Trial Lesson</a>
     </div>
 </section>
 
@@ -92,43 +92,7 @@ import musicstaff from "src/icons/music-staff.svg";
                 align-items: center;
             }
 
-            .cs-button-solid {
-                font-size: (16/16rem);
-                /* 46px - 56px */
-                line-height: clamp(2.875em, 5.5vw, 3.5em);
-                text-decoration: none;
-                font-weight: 700;
-                text-align: center;
-                margin: 0;
-                color: #fff;
-                min-width: (214/16rem);
-                padding: 0 (32/16rem);
-                background-color: var(--primary);
-                display: inline-block;
-                position: relative;
-                z-index: 1;
-                /* prevents padding from adding to the width */
-                box-sizing: border-box;
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    height: 100%;
-                    width: 0%;
-                    background: #000;
-                    opacity: 1;
-                    top: 0;
-                    left: 0;
-                    z-index: -1;
-                    transition: width 0.3s;
-                }
-
-                &:hover {
-                    &:before {
-                        width: 100%;
-                    }
-                }
-            }
+            
 
             .cs-card-group {
                 width: 100%;
@@ -287,16 +251,7 @@ import musicstaff from "src/icons/music-staff.svg";
                     filter: grayscale(1) brightness(1000%);
                 }
 
-                .cs-button-solid {
-                    transition: color 0.3s;
-                    &:hover {
-                        color: var(--primary);
-                    }
-
-                    &:before {
-                        background-color: #fff;
-                    }
-                }
+                
             }
         }
     }

@@ -38,208 +38,134 @@ const { image } = Astro.props as Props;
     />
 </section>
 
-<!-- <section id="hero">
-	<div class="cs-container">
-		<div class="cs-flex-group">
-			<span class="cs-topper">Music is Magical</span>
-			<h1 class="cs-title">Keys on Avalon <br /> Piano and Vocal Studio</h1>
-			<p class="cs-text">
-				This intermediate kit includes a pre-configured Astro
-				environment, which allows for repeated components, centralized
-				data and greater room to scale as your clients grow. Decap CMS
-				has been integrated to run a blog.
-			</p>
-			<a href="/about/" class="cs-button-solid">Explore More</a>
-			<a href="/contact/" class="cs-button-transparent">
-				<Icon name="play" class="cs-img" />
-				Get in Touch
-			</a>
-		</div>
-	</div>-->
-
-<!-- Using the preloaded image from the props -->
-<!--<Picture
-		src={image.src}
-		alt="new home"
-		width={image.attributes.width}
-		height={image.attributes.height}
-		formats={["avif", "webp"]}
-		priority
-		pictureAttributes={{ class: "cs-picture" }}
-	/>
-</section> -->
-
-<style lang="less">
-    /*-- -------------------------- -->
+<style lang="less">/*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
 
-    /* Mobile - 360px */
-    @media only screen and (min-width: 0rem) {
-        #hero-541 {
-            /* 144px - 300px - leaving extra space for the navigation */
-            padding: clamp(5rem, 10vw, 8rem) (16/16rem) 0;
-            /* 130px - 175px */
-            padding-bottom: clamp(8.125rem, 12.5vw, 10.9375rem);
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
-            /* clips the color overlay so it doesn't cause an overflow */
-            overflow: hidden;
-            position: relative;
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #hero-541 {
+        /* Centers button */
+        text-align: left;
+        /* 144px - 300px - leaving extra space for the navigation */
+        padding: clamp(5.125rem, 1.95vw, 20.75rem) (16/16rem) 0;
+        /* 130px - 200px */
+        padding-bottom: clamp(1.125rem, 1.5vw, 1rem);
+        position: relative;
+        z-index: 1;
 
-            .cs-container {
-                width: 100%;
-                max-width: (1280/16rem);
-                margin: auto;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                /* 48px - 64px */
-                gap: clamp(3rem, 6vw, 4rem);
-            }
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
 
-            .cs-content {
-                text-align: left;
-                /* changed to at tablet */
-                width: 90%;
-                max-width: (545/16rem);
-                /* 100px - 150px, changes to 0 at tablet */
-                margin-top: clamp(1rem, 5vw, 2rem);
-            }
-
-            .cs-title {
-                /* 39px - 61px */
-                font-size: clamp(2.4375rem, 6.7vw, 3.8125rem);
-                font-weight: 900;
-                line-height: 1.2em;
-                text-align: inherit;
-                max-width: (700/16rem);
-                /* 16px - 32px */
-                margin: 0 0 clamp(1rem, 4vw, 2rem) 0;
-                color: var(--bodyTextColorWhite);
-                position: relative;
-            }
-
-            .cs-text {
-                font-size: var(--bodyFontSize);
-                line-height: 1.5em;
-                text-align: inherit;
-                width: 100%;
-                max-width: (650/16rem);
-                /* 40px - 64px */
-                margin: 0 0 clamp(2.5rem, 6.3vw, 4rem);
-                color: var(--bodyTextColorWhite);
-            }
-            .cs-logo {
-                width: min(80vw, 60rem);
-                height: auto;
-                display: block;
-                margin-bottom: clamp(1rem, 3vw, 2rem);
-                color: var(--bodyTextColorWhite);
-
-                svg {
-                    width: 100%;
-                    height: auto;
-                    display: block;
-                }
-            }
-
-            .cs-button-solid {
-                font-size: (16/16rem);
-                /* 46px - 56px */
-                line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-                text-decoration: none;
-                font-weight: 700;
-                text-align: center;
-                margin: auto;
-                color: #1a1a1a;
-                min-width: (150/16rem);
-                padding: 0 (24/16rem);
-                background-color: var(--secondary);
-                border-radius: (4/16rem);
-                display: inline-block;
-                position: relative;
-                z-index: 1;
-                /* prevents padding from adding to the width */
-                box-sizing: border-box;
-                transition: color 0.3s;
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    height: 100%;
-                    width: 0%;
-                    background: #000;
-                    opacity: 1;
-                    top: 0;
-                    left: 0;
-                    z-index: -1;
-                    border-radius: (4/16rem);
-                    transition: width 0.3s;
-                }
-
-                &:hover {
-                    color: #fff;
-                    &:before {
-                        width: 100%;
-                    }
-                }
-            }
-
-            .cs-background {
-                width: 100%;
-                height: 100%;
-                display: block;
+            &:before {
+                /* Overlay */
+                content: "";
                 position: absolute;
                 top: 0;
                 left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(
+                    ellipse at center,
+                    rgba(255, 255, 255, 0.2) 0%,   /* A: Start with 50% transparent white at the dead center */
+        rgba(255, 255, 255, 0.3) 30%,  /* B: Fade it out quickly by 20% mark */
+        var(--medium) 60%,             /* C: Start pulling in your medium color */
+        var(--medium) 100%
+                );
+                -webkit-backdrop-filter: blur(2px);
+                backdrop-filter: blur(2px);
+                z-index: 1; /* Sits above the img */
+                /* prevents the cursor from interacting with it */
+                pointer-events: none;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                z-index: -1; /* Sits below the overlay */
+            }
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+        }
+
+        .cs-title {
+            /* 39px - 61px */
+            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-align: left;
+            max-width: (829/16rem);
+            /* 16px - 24px */
+            margin: 0 auto clamp(1rem, 4vw, 1.5rem) 0;
+            color: #fff;
+            position: relative;
+        }
+
+        .cs-text {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 1.95vw, 1.25rem);
+            line-height: 1.5em;
+            text-align: left;
+            width: 100%;
+            /* 464px - 622px */
+            max-width: clamp(29rem, 60vw, 38.785rem);
+            margin: 0 auto 0 0;
+            /* 40px - 48px */
+            margin-bottom: clamp(2.5rem, 4vw, 3rem);
+            color: #fff;
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            line-height: (56/16rem);
+            text-decoration: none;
+            font-weight: 700;
+            margin: auto;
+            color: #fff;
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
                 z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
 
+            &:hover {
                 &:before {
-                    /* background color overlay */
-                    content: "";
-                    position: absolute;
-                    display: block;
-                    height: (2000/16rem);
-                    width: (3000/16rem);
-                    background: rgba(12, 12, 12, 0.4);
-                    -webkit-backdrop-filter: blur(5px);
-                    backdrop-filter: blur(5px);
-                    top: (1125/16rem);
-                    left: 50%;
-                    z-index: 1;
-                    transform: rotate(30deg) translateX(-50%);
-                }
-
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
                     width: 100%;
-                    /* Makes img tag act as a background image */
-                    object-fit: cover;
                 }
             }
         }
     }
+}
 
-    /* Tablet - 768px */
-    @media only screen and (min-width: 48rem) {
-        #hero-541 {
-            .cs-content {
-                width: 48%;
-                margin-top: (0/16rem);
-            }
-
-            .cs-background {
-                &:before {
-                    top: (120/16rem);
-                    margin-left: (-2035/16rem);
-                    transform: rotate(60deg);
-                }
-            }
-        }
-    }
+                                
 </style>
