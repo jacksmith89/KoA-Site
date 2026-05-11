@@ -1,0 +1,339 @@
+---
+// No utils nor props for this component
+---
+
+<section id="faq-1741">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Frequently Asked Questions</span>
+            <h2 class="cs-title">
+                Don't see your question here? Check out the full list of FAQs.
+            </h2>
+            <a href="/faq/" class="cs-button-solid">More Questions</a>
+        </div>
+        <div class="cs-flex-group">
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Do I need a piano or keyboard at home before
+                            starting lessons?
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        You don't need one for your free trial lesson, as that
+                        will take place in the studio. That said, having an
+                        instrument at home is essential for making meaningful
+                        progress, and we'll talk about options during or after
+                        your first lesson. Keys on Avalon has a limited number
+                        of keyboards available for rental or rent-to-own for
+                        families who need one.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Do I need to buy books or supplies?
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        No. Tuition is all-inclusive. Printed materials, sheet
+                        music, and practice assignments are provided at no
+                        additional cost, along with a three-ring binder to keep
+                        everything organized. If you'd like to purchase your own
+                        copies of the method books used in lessons, titles and
+                        edition information are available on request.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Do you offer any discounts?
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        Yes, in two ways. First, partner lessons are priced at
+                        the same monthly rate as a shorter solo lesson. A
+                        45-minute partner lesson costs the same per student as a
+                        30-minute solo, and a 60-minute partner lesson costs the
+                        same as a 45-minute solo.
+                    </p>
+                    <p class="cs-item-text">
+                        Second, the Practice Pays program rewards consistent
+                        practice with up to $15 off the following month's
+                        tuition for students who log regular practice sessions
+                        in the Vivid Practice app. Details on both are available
+                        on the Pricing page.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Do you offer make-up options for missed lessons?
+                        </span>
+                    </button>
+                    <p class="cs-item-text">
+                        With at least 24 hours notice, we'll make every effort
+                        to reschedule within the same week. If no slot is
+                        available, a video lesson with updated practice
+                        assignments will be provided. For planned absences like
+                        vacations that are known before the start of the month,
+                        you can request special consideration for a 20%
+                        reduction in that month's tuition. Less than 24 hours
+                        notice generally does not qualify for a reschedule or
+                        makeup.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<style lang="less">
+    /* Mobile - 360px */
+    @media only screen and (min-width: 0rem) {
+        #faq-1741 {
+            padding: var(--sectionPadding);
+            position: relative;
+
+            .cs-container {
+                width: 100%;
+                /* changes to 1280px at desktop */
+                max-width: (584/16rem);
+                margin: 2em auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* 48px - 64px */
+                gap: clamp(3rem, 6vw, 4rem);
+            }
+
+            .cs-content {
+                /* set text align to left if content needs to be left aligned */
+                text-align: center;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                /* centers content horizontally, set to flex-start to left align */
+                align-items: center;
+            }
+
+            .cs-title {
+                padding-top: 1rem;
+                line-height: 2em;
+                max-width: 30ch;
+                margin: 0 0 (32/16rem);
+                font-size: clamp(1.75rem, 2vw, 1.75rem); /* adjust to taste */
+            }
+
+            .cs-faq-group {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: (12/16rem);
+            }
+
+            .cs-faq-item {
+                list-style: none;
+                width: 100%;
+                /* clips all corners of the button that overlap the rounded border */
+                overflow: hidden;
+                transition: border-bottom 0.3s;
+
+                &.active {
+                    .cs-button {
+                        background-color: var(--secondary);
+                        color: var(--bodyTextColorWhite);
+
+                        &:before {
+                            background-color: var(--bodyTextColorWhite);
+                            transform: rotate(315deg);
+                        }
+
+                        &:after {
+                            background-color: var(--bodyTextColorWhite);
+                            transform: rotate(-315deg);
+                        }
+                    }
+
+                    .cs-item-text {
+                        height: auto;
+                        /* 16px - 24px */
+                        padding: (16/16rem) clamp(1rem, 2vw, 1.5rem);
+                        opacity: 1;
+                        border: 1px solid #e8e8e8;
+                    }
+                }
+            }
+
+            .cs-button {
+                /* 16px - 20px */
+                font-size: clamp(1rem, 2.5vw, 1.25rem);
+                font-weight: bold;
+                line-height: 1.2em;
+                text-align: left;
+                width: 100%;
+                padding: (16/16rem);
+                padding-left: (52/16rem);
+                background-color: transparent;
+                color: var(--headerColor);
+                border: 1px solid #e8e8e8;
+                display: block;
+                position: relative;
+                transition:
+                    background-color 0.3s,
+                    color 0.3s;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:before {
+                    /* left line */
+                    content: "";
+                    width: (8/16rem);
+                    height: (2/16rem);
+                    background-color: var(--headerColor);
+                    opacity: 1;
+                    display: block;
+                    position: absolute;
+                    top: 45%;
+                    left: (18/16rem);
+                    transform: rotate(45deg);
+                    transition: transform 0.5s;
+                    /* animate the transform from the left side of the x axis, and the center of the y */
+                    transform-origin: left center;
+                }
+
+                &:after {
+                    /* right line */
+                    content: "";
+                    width: (8/16rem);
+                    height: (2/16rem);
+                    background-color: var(--headerColor);
+                    opacity: 1;
+                    display: block;
+                    position: absolute;
+                    top: 45%;
+                    left: (21/16rem);
+                    transform: rotate(-45deg);
+                    transition: transform 0.5s;
+                    /* animate the transform from the right side of the x axis, and the center of the y */
+                    transform-origin: right center;
+                }
+            }
+
+            .cs-item-text {
+                /* 14px - 16px */
+                font-size: clamp(0.875rem, 1.5vw, 1rem);
+                line-height: 1.5em;
+                height: 0;
+                margin: 0;
+                /* clips the text so it doesn't show up */
+                overflow: hidden;
+                color: var(--bodyTextColor);
+                opacity: 0;
+                transition:
+                    opacity 0.3s,
+                    padding-bottom 0.3s;
+            }
+        }
+    }
+
+    /* Tablet - 768px */
+    @media only screen and (min-width: 48rem) {
+        #faq-1741 {
+            .cs-gallery {
+                max-width: (1720/16rem);
+            }
+
+            .cs-picture {
+                grid-column: span 1;
+            }
+        }
+    }
+
+    /* Desktop - 1024px */
+    @media only screen and (min-width: 64rem) {
+        #faq-1741 {
+            .cs-container {
+                max-width: (1280/16rem);
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+            }
+
+            .cs-content {
+                text-align: left;
+                width: 40%;
+                align-items: flex-start;
+                /* prevents flexbox from squishing it */
+                flex: none;
+            }
+        }
+    }
+
+    /* Dark Mode */
+    @media only screen and (min-width: 0rem) {
+        body.dark-mode {
+            #faq-1741 {
+                .cs-title,
+                .cs-item-text {
+                    color: var(--bodyTextColorWhite);
+                }
+
+                .cs-topper {
+                    color: var(--primaryLight);
+                }
+
+                .cs-faq-item {
+                    &.active {
+                        .cs-button {
+                            background-color: var(--secondary);
+                            color: var(--bodyTextColorWhite);
+
+                            &:before,
+                            &:after {
+                                background-color: var(--bodyTextColorWhite);
+                            }
+                        }
+
+                        .cs-item-text {
+                            /* 20px - 24px */
+                            padding-top: clamp(1.25rem, 1.3vw, 1.5rem);
+                            border-color: var(--accent);
+                        }
+                    }
+                }
+
+                .cs-button {
+                    color: var(--bodyTextColorWhite);
+                    border-color: var(--accent);
+
+                    &:before,
+                    &:after {
+                        background-color: var(--bodyTextColorWhite);
+                    }
+                }
+            }
+        }
+    }
+</style>
+
+<script>
+    // Paste the JS inside Astro:page-load wrapper for View Transitions purposes
+    document.addEventListener("astro:page-load", () => {
+        const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+        for (const item of faqItems) {
+            const onClick = () => {
+                item.classList.toggle("active");
+            };
+            item.addEventListener("click", onClick);
+        }
+    });
+</script>

@@ -6,26 +6,67 @@ import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
 
 // Images
-import cabinets2 from "@assets/images/services/cabinets2.jpg";
-import construction from "@assets/images/services/construction.jpg";
+import jackpianohands from "@assets/images/services/jackpianohands.jpg";
+import jackpiano from "@assets/images/services/jackpiano.jpg";
 ---
 
 <section id="sbs">
 	<div class="cs-container">
 		<!-- Left Image Section -->
 		<div class="cs-left">
-			<Picture src={cabinets2} alt="cabinets" width={522} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} priority />
-			<Picture src={construction} alt="house" width={390} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} priority />
+			<Picture
+				src={jackpianohands}
+				alt="jackpianohands"
+				width={522}
+				formats={["avif", "webp"]}
+				pictureAttributes={{ class: "cs-picture cs-picture1" }}
+				priority
+			/>
+			<Picture
+				src={jackpiano}
+				alt="jackpiano"
+				width={390}
+				formats={["avif", "webp"]}
+				pictureAttributes={{ class: "cs-picture cs-picture2" }}
+				priority
+			/>
 		</div>
 		<!-- Right Content Section-->
 		<div class="cs-right">
-			<span class="cs-topper">The Philosphy of</span>
-      <h2 class="cs-title">Keys on Avalon</h2>
-      <p>My core belief is that everyone benefits from having more music in their life. While I hope that students who come through my studio take what I have to teach about singing and playing the piano, my real goal is to help every student build a foundation and love of music that will travel with them wherever their journey leads, whether that's continuing lessons, picking up a different instrument, or simply being someone who understands and appreciates music deeply.
-      <br><br>
-      I want every student to be engaged and excited about the next step, and growing at the pace that's right for them. Students here will learn the language of music, to play, hear, understand, and feel it, so that their connection to music is deeper and stronger than when they first walked in the door.
-      <br><br>
-      That philosophy means that I want my lessons to be affordable and approachable, that I want to remove barriers to entry wherever I can, and to make learning music engaging and positive at every stage, so that everyone who wants more music in their life has the chance to find it.</p>
+			<span class="cs-topper">The Story of</span>
+			<h2 class="cs-title">Keys on Avalon</h2>
+			<p class="cs-text">
+				I'm Wesley Reid, owner and teacher at <b>Keys on Avalon</b>.
+			</p>
+			<p class="cs-text">
+				Music has been a part of my life for as long as I can remember.
+				I grew up in a musical household, joined my first choir when I
+				was six, and started playing piano when I was eleven. I
+				eventually went on to study vocal and choral music, music
+				composition, and education at Snow College from 2010 to 2015.
+			</p>
+			<p class="cs-text">
+				Following college, I ended up taking a different career path for
+				a decade. In 2025, having the opportunity to play piano
+				professionally again reminded me how much I truly love music and
+				how much I wanted to share that with others. I decided to do
+				something crazy and try to make a living doing what I love.
+			</p>
+			<p class="cs-text">
+				The name for the studio, <b>Keys on Avalon</b>, came from two
+				places. First, and most obviously, the studio is located near
+				Avalon Street in Kuna. But Avalon is also the mythical island
+				where Excalibur was forged and King Arthur was laid to rest. To
+				me, one of the core ideals of Aruthurian mythology is the Round
+				Table; a place of equality, where everyone has a seat. That is
+				what I want this studio to be: a place where everyone is welcome
+				and everyone belongs.
+			</p>
+			<br />
+			<p class="cs-topper">Ready To Take Your Seat At The Table?</p>
+			<a href="/contact/" class="cs-button-solid"
+				>Book Your Free Assessment and Trial Lesson</a
+			>
 		</div>
 	</div>
 </section>

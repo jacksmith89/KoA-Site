@@ -5,17 +5,24 @@
  */
 
 // Utils
+import { getImage } from "astro:assets";
 
 // Components
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Banner from "@components/Banner/Banner.astro";
 import FAQPage from "@components/FAQ/FAQPage.astro";
+import CTA from "@components/CTA/CTASimple.astro";
 // Data
 
 // Images
+import landingImage from "@assets/images/landing.jpg";
+const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 ---
 
-<BaseLayout title="Placeholder Page" description="Meta description for the page">
+<BaseLayout title="Frequently Asked Questions" description="Meta description for the page">
+	<Banner title="Frequently Asked Questions" image={optimizedImage} />
 	<FAQPage />
+	<CTA />
 </BaseLayout>
 
 <style lang="less">
